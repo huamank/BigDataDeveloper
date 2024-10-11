@@ -133,22 +133,23 @@ services:
      net_pet:
        ipv4_address: 172.27.1.11
   
-  spark-worker2:
-   image: bde2020/spark-worker:2.4.0-hadoop2.7
-   container_name: spark-worker2
-   depends_on:
-     - spark-master
-   environment:
-     - SPARK_MASTER=spark://spark-master:7077
-     - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
-     - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore/metastore
-   ports:
-     - 8081:8081
-   env_file:
-     - ./hadoop-hive.env
-   networks:
-     net_pet:
-       ipv4_address: 172.27.1.19
+  #Se comenta con Ctrl(cmd) + k + c
+  # spark-worker2:
+  #  image: bde2020/spark-worker:2.4.0-hadoop2.7
+  #  container_name: spark-worker2
+  #  depends_on:
+  #    - spark-master
+  #  environment:
+  #    - SPARK_MASTER=spark://spark-master:7077
+  #    - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+  #    - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore/metastore
+  #  ports:
+  #    - 8082:8081
+  #  env_file:
+  #    - ./hadoop-hive.env
+  #  networks:
+  #    net_pet:
+  #      ipv4_address: 172.27.1.19
   
 networks:
   net_pet:
