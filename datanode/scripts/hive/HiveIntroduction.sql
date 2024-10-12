@@ -165,8 +165,11 @@ CREATE TABLE persons3 (
 )
 PARTITIONED BY (quantity INT);
 
+INSERT INTO TABLE persons3 PARTITION (quantity = 1) VALUES
+   (1,"Vivian","Hamilton","1971-07-08","green");
 
 set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition.mode=strict;
 
 FROM persons
 INSERT OVERWRITE TABLE persons3 partition(quantity)
