@@ -168,6 +168,9 @@ PARTITIONED BY (quantity INT);
 INSERT INTO TABLE persons3 PARTITION (quantity = 1) VALUES
    (1,"Vivian","Hamilton","1971-07-08","green");
 
+-- INSERT INTO TABLE persons3 VALUES
+   -- (1,"Vivian","Hamilton","1971-07-08","green",1);
+
 set hive.exec.dynamic.partition.mode=nonstrict;
 set hive.exec.dynamic.partition.mode=strict;
 
