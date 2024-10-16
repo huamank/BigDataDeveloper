@@ -66,6 +66,7 @@ En un nuevo terminal (en un terminal sin estar dentro de un contenedor), copiar 
 ```     >_ docker cp datanode/scripts/hive/hive_avro.hql hive-server:/opt      ``` <br> 
 En el contenedor de hive-server ejecutamos lo siguiente para crear las tablas. 
 ```     >_ hive -f /opt/hive.hql    ``` <br> 
+```     >_ hive -f /opt/hive_avro.hql    ``` 
 
 
 
