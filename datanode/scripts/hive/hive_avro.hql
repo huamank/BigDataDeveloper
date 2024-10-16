@@ -1,4 +1,4 @@
-CREATE DATABASE retail_db;
+CREATE DATABASE IF NOT EXISTS retail_db;
 
 USE retail_db;
 
